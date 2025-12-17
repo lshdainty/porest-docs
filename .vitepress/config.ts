@@ -3,9 +3,10 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'POREST',
   description: '사람이 숲이 되는 곳, 인재의 숲을 키우다',
+  base: '/porest-docs/',
 
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/porest-docs/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#00A86B' }],
   ],
 
