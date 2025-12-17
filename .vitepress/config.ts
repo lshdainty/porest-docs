@@ -17,7 +17,8 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '가이드', link: '/guide/introduction' },
-          { text: '기능', link: '/features/schedule' },
+          { text: '기능', link: '/features/home/dashboard' },
+          { text: '관리자', link: '/admin/company' },
           { text: 'FAQ', link: '/faq' },
         ],
         sidebar: {
@@ -33,14 +34,72 @@ export default defineConfig({
           ],
           '/features/': [
             {
-              text: '기능',
+              text: '홈',
+              collapsed: false,
               items: [
-                { text: '일정관리', link: '/features/schedule' },
-                { text: '휴가관리', link: '/features/vacation' },
-                { text: '전자결재', link: '/features/approval' },
-                { text: '권한관리', link: '/features/permission' },
+                { text: '대시보드', link: '/features/home/dashboard' },
+                { text: '캘린더', link: '/features/home/calendar' },
+                { text: '공지사항', link: '/features/home/notice' },
               ]
-            }
+            },
+            {
+              text: '휴가',
+              collapsed: false,
+              items: [
+                { text: '휴가 내역', link: '/features/vacation/history' },
+                { text: '휴가 신청', link: '/features/vacation/application' },
+              ]
+            },
+            {
+              text: '업무',
+              collapsed: false,
+              items: [
+                { text: '업무 보고', link: '/features/work/report' },
+                { text: '업무 일정', link: '/features/work/schedule' },
+              ]
+            },
+            {
+              text: '문화',
+              collapsed: false,
+              items: [
+                { text: '회비', link: '/features/culture/dues' },
+                { text: '규정', link: '/features/culture/regulation' },
+              ]
+            },
+          ],
+          '/admin/': [
+            {
+              text: '관리자',
+              items: [
+                { text: '회사 관리', link: '/admin/company' },
+                { text: '공휴일 관리', link: '/admin/holiday' },
+                { text: '업무 코드', link: '/admin/work-code' },
+                { text: '공지사항 관리', link: '/admin/notice' },
+              ]
+            },
+            {
+              text: '사용자 관리',
+              collapsed: false,
+              items: [
+                { text: '사용자 관리', link: '/admin/users/management' },
+                { text: '부서 관리', link: '/admin/users/department' },
+              ]
+            },
+            {
+              text: '휴가 관리',
+              collapsed: false,
+              items: [
+                { text: '휴가 승인', link: '/admin/vacation/approval' },
+                { text: '휴가 정책', link: '/admin/vacation/policy' },
+                { text: '휴가 계획', link: '/admin/vacation/plan' },
+              ]
+            },
+            {
+              text: '권한 관리',
+              items: [
+                { text: '권한 설정', link: '/admin/authority' },
+              ]
+            },
           ],
         },
         outline: {
@@ -82,7 +141,8 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Guide', link: '/en/guide/introduction' },
-          { text: 'Features', link: '/en/features/schedule' },
+          { text: 'Features', link: '/en/features/home/dashboard' },
+          { text: 'Admin', link: '/en/admin/company' },
           { text: 'FAQ', link: '/en/faq' },
         ],
         sidebar: {
@@ -98,14 +158,72 @@ export default defineConfig({
           ],
           '/en/features/': [
             {
-              text: 'Features',
+              text: 'Home',
+              collapsed: false,
               items: [
-                { text: 'Schedule', link: '/en/features/schedule' },
-                { text: 'Vacation', link: '/en/features/vacation' },
-                { text: 'Approval', link: '/en/features/approval' },
-                { text: 'Permission', link: '/en/features/permission' },
+                { text: 'Dashboard', link: '/en/features/home/dashboard' },
+                { text: 'Calendar', link: '/en/features/home/calendar' },
+                { text: 'Notice', link: '/en/features/home/notice' },
               ]
-            }
+            },
+            {
+              text: 'Vacation',
+              collapsed: false,
+              items: [
+                { text: 'Vacation History', link: '/en/features/vacation/history' },
+                { text: 'Vacation Application', link: '/en/features/vacation/application' },
+              ]
+            },
+            {
+              text: 'Work',
+              collapsed: false,
+              items: [
+                { text: 'Work Report', link: '/en/features/work/report' },
+                { text: 'Work Schedule', link: '/en/features/work/schedule' },
+              ]
+            },
+            {
+              text: 'Culture',
+              collapsed: false,
+              items: [
+                { text: 'Dues', link: '/en/features/culture/dues' },
+                { text: 'Regulation', link: '/en/features/culture/regulation' },
+              ]
+            },
+          ],
+          '/en/admin/': [
+            {
+              text: 'Admin',
+              items: [
+                { text: 'Company', link: '/en/admin/company' },
+                { text: 'Holiday', link: '/en/admin/holiday' },
+                { text: 'Work Code', link: '/en/admin/work-code' },
+                { text: 'Notice', link: '/en/admin/notice' },
+              ]
+            },
+            {
+              text: 'User Management',
+              collapsed: false,
+              items: [
+                { text: 'User Management', link: '/en/admin/users/management' },
+                { text: 'Department', link: '/en/admin/users/department' },
+              ]
+            },
+            {
+              text: 'Vacation Management',
+              collapsed: false,
+              items: [
+                { text: 'Approval', link: '/en/admin/vacation/approval' },
+                { text: 'Policy', link: '/en/admin/vacation/policy' },
+                { text: 'Plan', link: '/en/admin/vacation/plan' },
+              ]
+            },
+            {
+              text: 'Permission',
+              items: [
+                { text: 'Authority', link: '/en/admin/authority' },
+              ]
+            },
           ],
         },
       },
